@@ -1,27 +1,23 @@
-import { useState, createContext } from "react";
-import Note from "./Note";
+import Template from "./template/Template";
+import { Switch, Route, Redirect } from "react-router-dom";
+import Dashboard from "./dashboard/Dashboard";
+import Table from "./table/Table";
 
-export const NoteContext = createContext();
+//export const PathContext = createContext();
 
 function App() {
-
-  const [note, setNote] = useState("");
-
-  function handleChange(event) {
-    setNote(event.target.value);
-  }
-
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6 py-2">
-          <input type="text" value={note} onChange={handleChange} className="mb-2"/>
-          <NoteContext.Provider value={note}>
-            <Note />
-          </NoteContext.Provider>
-        </div>
-      </div>
-    </div>
+    <Template>
+      <Switch>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        <Route path="/tables">
+          <Table />
+        </Route>
+        <Redirect from="/" to="/dashboard" exact />
+      </Switch>
+    </Template>
   );
 }
 

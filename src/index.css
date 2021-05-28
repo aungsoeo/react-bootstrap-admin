@@ -11,3 +11,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.bg-custom-light {
+  background-color: rgb(245, 245, 245);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1080;
+} 
+
+.cs-border-top {
+  border-top: 1px solid rgba(255,255,255,.15);
+}
+
+.cs-border-bottom {
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.cs-nav-link {
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+}
+
+.cs-nav-link svg {
+  color: rgba(255,255,255,.3);
+}
+
+.cs-nav-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.cs-nav-link:hover svg {
+  color: white;
+}
+
+.cs-nav-link:focus {
+  color: white;
+  text-decoration: none;
+}
+
+.cs-nav-link:focus svg {
+  color: white;
+}
+
+.cs-nav-link.active {
+  color: white;
+}
+
+.cs-nav-link.active svg {
+  color: white;
+}
